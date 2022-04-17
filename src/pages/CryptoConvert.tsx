@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router-dom';
 
 function CryptoConvert() {
@@ -18,7 +19,16 @@ function CryptoConvert() {
 
   if (!data) return null;
 
-  return <h1>1 ETH = {data.data.rates.USD} USD</h1>;
+  return (
+    <>
+      <Helmet>
+        <title>{id.toUpperCase()} price</title>
+      </Helmet>
+      <h1>
+        1 {id.toUpperCase()} = {data.data.rates.USD} USD
+      </h1>
+    </>
+  );
 }
 
 export default CryptoConvert;
