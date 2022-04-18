@@ -7,6 +7,7 @@ import CryptoConvert from './pages/CryptoConvert';
 import Homepage from './pages/Homepage';
 import Navigation from './components/Navigation';
 import Crypto from './pages/Crypto';
+import ConvertAudioVideo from './pages/ConvertAudioVideo';
 
 const engine = new Styletron();
 
@@ -18,6 +19,7 @@ function App() {
           <Navigation />
           <Routes>
             <Route path="/crypto" element={<Crypto />} />
+            <Route path="/video" element={<ConvertAudioVideo />} />
             <Route path="/crypto/:id" element={<CryptoConvert />} />
             <Route path="/" element={<Homepage />} />
           </Routes>
