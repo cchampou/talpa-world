@@ -1,36 +1,34 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useStyletron } from 'baseui';
+import React, { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { AppNavBar } from 'baseui/app-nav-bar';
 
 function Navigation() {
-  const [css, theme] = useStyletron();
+  const { pathname } = useLocation();
   const [mainItems, setMainItems] = useState([
     {
-      label: 'Ethereum',
-      to: '/crypto/eth',
+      label: 'Video',
+      to: '/video',
     },
     {
-      label: 'Bitcoin',
-      to: '/crypto/btc',
-    },
-    {
-      label: 'Solana',
-      to: '/crypto/sol',
+      label: 'Crypto',
+      to: '/crypto',
     },
   ]);
   const navigate = useNavigate();
 
   const onMainItemClick = (item) => {
     navigate(item.to);
+  };
+
+  useEffect(() => {
     setMainItems((prev) =>
-      prev.map((element) =>
-        element.to === item.to
-          ? { ...element, active: true }
-          : { ...element, active: false }
+      prev.map((item) =>
+        pathname.includes(item.to)
+          ? { ...item, active: true }
+          : { ...item, active: false }
       )
     );
-  };
+  }, [pathname]);
 
   return (
     <AppNavBar

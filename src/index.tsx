@@ -6,6 +6,7 @@ import { BaseProvider, LightTheme } from 'baseui';
 import CryptoConvert from './pages/CryptoConvert';
 import Homepage from './pages/Homepage';
 import Navigation from './components/Navigation';
+import Crypto from './pages/Crypto';
 
 const engine = new Styletron();
 
@@ -16,6 +17,7 @@ function App() {
         <BrowserRouter>
           <Navigation />
           <Routes>
+            <Route path="/crypto" element={<Crypto />} />
             <Route path="/crypto/:id" element={<CryptoConvert />} />
             <Route path="/" element={<Homepage />} />
           </Routes>
