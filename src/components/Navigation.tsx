@@ -9,6 +9,10 @@ function Navigation() {
   const [, theme] = useStyletron();
   const [mainItems, setMainItems] = useState([
     {
+      label: 'Home',
+      to: '/',
+    },
+    {
       label: 'Video',
       to: '/video',
     },
@@ -26,7 +30,7 @@ function Navigation() {
   useEffect(() => {
     setMainItems((prev) =>
       prev.map((item) =>
-        pathname.includes(item.to)
+        pathname === item.to
           ? { ...item, active: true }
           : { ...item, active: false }
       )
