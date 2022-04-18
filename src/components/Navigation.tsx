@@ -13,6 +13,10 @@ function Navigation() {
       to: '/',
     },
     {
+      label: 'Software',
+      to: '/software',
+    },
+    {
       label: 'Video',
       to: '/video',
     },

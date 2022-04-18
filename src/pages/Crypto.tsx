@@ -10,7 +10,7 @@ function Crypto() {
   return (
     <Block margin={theme.sizing.scale500}>
       <Grid align={ALIGNMENT.center}>
-        <Cell span={[4, 8, 12]}>
+        <Cell span={[4, 4, 6]}>
           <Card>
             <h1>Get prices of the most common coins</h1>
             <NavLink to="/crypto/btc">Bitcoin</NavLink>
