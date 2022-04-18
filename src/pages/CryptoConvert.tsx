@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router-dom';
+import { Card } from 'baseui/card';
 
 function CryptoConvert() {
   const { id } = useParams();
@@ -13,7 +14,6 @@ function CryptoConvert() {
       .then((response) => response.json())
       .then((coins) => {
         setData(coins);
-        console.log(coins);
       });
   }, []);
 
@@ -24,9 +24,11 @@ function CryptoConvert() {
       <Helmet>
         <title>{id.toUpperCase()} price</title>
       </Helmet>
-      <h1>
-        1 {id.toUpperCase()} = {data.data.rates.USD} USD
-      </h1>
+      <Card>
+        <h1>
+          1 {id.toUpperCase()} = {data.data.rates.USD} USD
+        </h1>
+      </Card>
     </>
   );
 }
