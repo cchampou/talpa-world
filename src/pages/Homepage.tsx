@@ -12,6 +12,14 @@ function Homepage() {
       <Grid>
         <Cell span={12}>
           <Card>
+            <h1>Stay productive</h1>
+            <NavLink to="/productivity">
+              Use my tools to stay productive
+            </NavLink>
+            <h1>Work smart not hard</h1>
+            <NavLink to="/software">
+              Here are my software tips, tricks and tools
+            </NavLink>
             <h1>Video maker?</h1>
             <NavLink to="/video">
               Check out how to convert a video or audio quickly and easily
