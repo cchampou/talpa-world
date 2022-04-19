@@ -10,7 +10,7 @@ function Homepage() {
         <title>Homepage</title>
       </Helmet>
       <Grid>
-        <Cell span={12}>
+        <Cell span={6}>
           <Card>
             <h1>Stay productive</h1>
             <NavLink to="/productivity">
