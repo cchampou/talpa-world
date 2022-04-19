@@ -13,6 +13,10 @@ function Navigation() {
       to: '/',
     },
     {
+      label: 'Productivity',
+      to: '/productivity',
+    },
+    {
       label: 'Software',
       to: '/software',
     },

@@ -3,6 +3,8 @@
     "esModuleInterop": true,
     "jsx": "react-jsx",
     "lib": ["esnext", "dom"],
-    "typeRoots": ["./src/types"]
+    "typeRoots": ["./src/types"],
+    "strictNullChecks": true,
+    "strict": true
   }
 }

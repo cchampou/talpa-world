@@ -9,6 +9,7 @@ import Navigation from './components/Navigation';
 import Crypto from './pages/Crypto';
 import ConvertAudioVideo from './pages/ConvertAudioVideo';
 import Software from './pages/Software';
+import Productivity from './pages/Productivity';
 
 const engine = new Styletron();
 
@@ -19,6 +20,7 @@ function App() {
         <BrowserRouter>
           <Navigation />
           <Routes>
+            <Route path="/productivity" element={<Productivity />} />
             <Route path="/crypto" element={<Crypto />} />
             <Route path="/software" element={<Software />} />
             <Route path="/video" element={<ConvertAudioVideo />} />
